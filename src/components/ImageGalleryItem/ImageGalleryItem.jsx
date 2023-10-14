@@ -1,14 +1,14 @@
 import css from './ImageGalleryItem.module.css';
 import PropTypes from 'prop-types';
 
-export const ImageGalleryItem = ({ images, togleModal }) => {
+export const ImageGalleryItem = ({ images, toggleModal }) => {
   return (
     <>
       {images.map(item => (
         <li
           key={item.id}
           onClick={() => {
-            togleModal(item.largeImageURL, item.tags);
+            toggleModal(item.largeImageURL, item.tags);
           }}
           className={css.galleryItem}
         >
